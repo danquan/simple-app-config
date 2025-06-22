@@ -1,0 +1,18 @@
+frontend:
+  image:
+    repository: lamlaicuocdoi1105/simple-frontend
+    tag: stable
+  replicas: 2
+  service:
+    type: NodePort
+    port: 80
+    nodePort: 30084
+
+backend:
+  image:
+    repository: lamlaicuocdoi1105/simple-backend
+    tag: stable
+  replicas: 2
+  service:
+    type: ClusterIP
+    port: 5001
